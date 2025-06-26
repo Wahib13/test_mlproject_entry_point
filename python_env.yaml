@@ -1,0 +1,16 @@
+# python_env.yaml
+python: "3.10.7"
+
+# Build‑time dependencies (optional; defaults include pip, setuptools, wheel)
+build_dependencies:
+  - virtualenv
+  - pip
+  - setuptools
+  - wheel==0.37.1
+
+# Runtime dependencies
+dependencies:
+  - mlflow>=2.0.0
+  - scikit-learn==1.2.0
+  - pandas>=1.5.0
+  - numpy>=1.21.0
