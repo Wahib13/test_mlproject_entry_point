@@ -13,7 +13,8 @@ def parse_args():
         required=True,
         help="Model name (required)"
     )
-    return parser.parse_args()
+    args, _ = parser.parse_known_args()
+    return args
 
 args = parse_args()
 
