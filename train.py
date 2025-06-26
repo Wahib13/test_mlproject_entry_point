@@ -1,11 +1,23 @@
+import argparse
 import mlflow
-import sys
 from sklearn.datasets import make_regression
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
 
-model_name = "test"
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--model_name",
+        type=str,
+        required=True,
+        help="Model name (required)"
+    )
+    return parser.parse_args()
+
+args = parse_args()
+
+model_name = args.model_name
 
 X, y = make_regression(n_features=4, n_informative=2, random_state=0, shuffle=False)
 X_train, X_test, y_train, y_test = train_test_split(
