@@ -1,5 +1,5 @@
 # python_env.yaml
-python: "3.10.7"
+python: "3.12"
 
 # Build‑time dependencies (optional; defaults include pip, setuptools, wheel)
 build_dependencies:
